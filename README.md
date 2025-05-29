@@ -54,7 +54,7 @@ php artisan queue:work
 
 You can test the API easily using our ready-made Postman collection.
 
-📁 (Postman/ContentScheduler.postman_collection.json)
+📁 GO TO THIS FOLDER IN OWR PROJECT (Postman/ContentScheduler.postman_collection.json)
 
 ### How to Use
 
