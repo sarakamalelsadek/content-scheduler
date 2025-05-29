@@ -48,7 +48,7 @@ php artisan queue:work
 
 # start the queue
 php artisan queue:work
-
+```
 
 # 📬 Postman Collection
 
