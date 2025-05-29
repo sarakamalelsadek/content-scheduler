@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "ab7f5523-eca5-4765-bf74-4715001000fe",
+		"name": "Content Scheduler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20919730",
+		"_collection_link": "https://solar-shuttle-240942.postman.co/workspace/EMS-API's~ff022081-1364-4161-9d34-aade28398ded/collection/20919730-ab7f5523-eca5-4765-bf74-4715001000fe?action=share&source=collection_link&creator=20919730"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"sara\",\r\n    \"email\": \"sara@example.com\",\r\n    \"password\": \"password\",\r\n    \"password_confirmation\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/register",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"sara\",\r\n    \"email\": \"sara@example.com\",\r\n    \"password\": \"password\",\r\n    \"password_confirmation\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/register",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|xqnRXRUmGik7lDIBZWtWcbFJ4lRLDRhCAilis4NW2cc96680",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/logout",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "post",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "post content test",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/Saved Pictures/website.jpg"
+								},
+								{
+									"key": "scheduled_time",
+									"value": "2026-02-01 14:00:00",
+									"type": "text"
+								},
+								{
+									"key": "platform_ids[0]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "platform_ids[1]",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/post",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{server}}/post",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "post2",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "post content test",
+									"type": "text"
+								},
+								{
+									"key": "scheduled_time",
+									"value": "2026-02-01 14:00:00",
+									"type": "text"
+								},
+								{
+									"key": "platform_ids[0]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "platform_ids[1]",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "remove_image",
+									"value": "1",
+									"description": "nullable",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/post/4/update",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"post",
+								"4",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Analytics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{server}}/post/analytics",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"post",
+								"analytics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Platform",
+			"item": [
+				{
+					"name": "Get User Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/platform",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"platform"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/platform/1/toggle",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"platform",
+								"1",
+								"toggle"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
