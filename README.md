@@ -50,7 +50,7 @@ php artisan queue:work
 php artisan queue:work
 
 
-## 📬 Postman Collection
+# 📬 Postman Collection
 
 You can test the API easily using our ready-made Postman collection.
 
@@ -63,3 +63,6 @@ You can test the API easily using our ready-made Postman collection.
 3. Select the downloaded `.json` file
 4. Set your environment variables (`server`, `token`)
 5. Start testing the API endpoints!
+
+## Thank You
+
