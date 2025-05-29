@@ -44,7 +44,7 @@ php artisan migrate --seed
 php artisan serve
 
 # run schedule
-php artisan queue:work
+php artisan schedule:work
 
 # start the queue
 php artisan queue:work
