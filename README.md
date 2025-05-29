@@ -64,5 +64,5 @@ You can test the API easily using our ready-made Postman collection.
 4. Set your environment variables (`server`, `token`)
 5. Start testing the API endpoints!
 
-## Thank You
+# Thank You
 
